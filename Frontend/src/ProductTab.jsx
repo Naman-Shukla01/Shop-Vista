@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import { useLocation } from "react-router-dom";
 
 const ProductTab = ({acc, setAcc, products, wishlist, setWishlist, cart, setCart }) => {
-  let [category, setCategory]= useState("all");
+  let location = useLocation();
+  console.log(location.state.category)
+  let [category, setCategory]= useState(location.state?.category||"all");
   const filteredProducts = category === "all"
     ? products
     : products.filter((product) => product.category === category);

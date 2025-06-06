@@ -9,7 +9,7 @@ import Cart from "./Cart";
 import Checkout from "./Checkout";
 import OrderConfirmation from "./OrderConfirmation";
 import SignupPage from "./SignupPage";
-import Navbar from "./Navbar";
+import ProductsPage from "./ProductsPage";
 
 function App() {
   let [products, setProducts] = useState([]);
@@ -56,6 +56,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        
         <Route
           path="/"
           element={
@@ -69,6 +70,14 @@ function App() {
             />
           }
         />
+        <Route path="/products" element={
+          <ProductsPage acc={acc} setAcc={setAcc}
+              products={products}
+              wishlist={wishlist}
+              setWishlist={setWishlist}
+              cart={cart}
+              setCart={setCart}/>
+        } ></Route>
         <Route
           path="/products/:id"
           element={

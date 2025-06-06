@@ -2,7 +2,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 
-const SignupPage = ({ acc }) => {
+const SignupPage = ({ acc, setAcc}) => {
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {

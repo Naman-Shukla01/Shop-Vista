@@ -31,7 +31,7 @@ const signup = async (req, res) => {
 
     let newUser = new User({name: name, email: email, password: password});
     await newUser.save();
-    res.redirect("/login")
+    
      
     } catch(err) {
         res.status(500).json({message: `Something went wrong ${err.message}`});

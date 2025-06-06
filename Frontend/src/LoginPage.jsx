@@ -1,3 +1,4 @@
+import server from "./environment";
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import { useNavigate } from "react-router-dom"
@@ -16,7 +17,7 @@ const LoginPage = ({acc, setAcc}) => {
     };
 
     
-      const res = await fetch("http://localhost:8080/users/login", {
+      const res = await fetch(`${server.prod}/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

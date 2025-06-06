@@ -14,7 +14,7 @@ const SignupPage = ({ acc, setAcc}) => {
       password: form.password.value,
     };
 
-    const res = await fetch("http://localhost:8080/users/signup", {
+    const res = await fetch(`${server.prod}/users/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

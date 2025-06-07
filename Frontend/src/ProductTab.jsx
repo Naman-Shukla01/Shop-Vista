@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 const ProductTab = ({acc, setAcc, products, wishlist, setWishlist, cart, setCart }) => {
   let location = useLocation();
-  console.log(location.state.category)
+  
   let [category, setCategory]= useState(location.state?.category||"all");
   const filteredProducts = category === "all"
     ? products

@@ -81,11 +81,20 @@ function Navbar({ acc, setAcc, cart }) {
             <div
               className="flex items-center cursor-pointer"
               onClick={() => {
-                navigate("/login");
+                navigate("/signup");
                 setIsOpen(false);
               }}
             >
               <i className="fa-regular fa-user px-2 text-xl"></i> Signup / Login
+            </div>
+          )}
+          {acc && (
+            <div
+              className=" flex items-center cursor-pointer"
+              onClick={() => setAcc(false)}
+            >
+              <i className="px-2 text-xl fa-regular fa-user"></i>
+              <div className="text-black">Logout</div>
             </div>
           )}
           <div

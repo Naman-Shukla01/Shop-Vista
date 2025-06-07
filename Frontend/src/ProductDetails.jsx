@@ -37,6 +37,7 @@ const ProductDetails = ({
     weight,
     availabilityStatus,
     returnPolicy,
+    rating,
     shippingInformation,
     warrantyInformation,
   } = products[pId - 1];
@@ -131,12 +132,15 @@ const ProductDetails = ({
               {returnPolicy}
             </div>
             <div className=" p-2 border-2 border-gray-200 font-semibold">
+              Rating: {rating}/5
+            </div>
+            <div className=" p-2 border-2 border-gray-200 font-semibold">
               {warrantyInformation}
             </div>
           </div>
         </div>
       </div>
-      <div className="space-y-2">
+      <div className="m-4 space-y-2">
         <p className=" text-2xl font-bold text-green-900">
           Additional Information
         </p>

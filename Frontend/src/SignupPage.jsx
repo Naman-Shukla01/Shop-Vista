@@ -39,23 +39,23 @@ const SignupPage = ({ acc, setAcc}) => {
         <img
           src="./login-page-bg.jpeg"
           alt=""
-          className="-z-10 absolute rounded-lg min-h-screen w-full "
+          className="-z-10 absolute rounded-lg min-h-screen w-full not-md:h-[120vh]"
         />
 
-        <div className="flex flex-col justify-center p-4 items-center">
+        <div className="flex flex-col justify-center p-4 items-center  ">
           <div>
               <div className="">
-            <h1 className="text-6xl pt-0 ml-30  text-gray-700 ">Welcome!</h1>
+            <h1 className="text-6xl pt-0 ml-30 not-md:ml-2.5 text-gray-700 ">Welcome!</h1>
           </div>
 
           <form
             onSubmit={handleSubmit}
             method="POST"
-            className=" bg-white ml-20 m-4 p-4 rounded-lg w-2/3 text-center h-[60vh] w-[55vh]"
+            className="not-md:m-0 not-md:mt-5 not-md:space-y-2 not-md:h-[75vh] not-md:p-2 bg-white ml-20 m-4 p-4 rounded-lg w-2/3 text-center h-[60vh] w-[55vh]"
           >
             <h2 className=" text-2xl font-bold text-green-900">Signup</h2>
             <br />
-            <br />
+            <br className="not-md:hidden"/>
             <label htmlFor="name">Enter name</label>
             <br />
             <input

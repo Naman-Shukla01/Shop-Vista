@@ -22,21 +22,21 @@ const HomePage = ({
         <div className="absolute -z-10">
           {" "}
           <img
-            className="min-h-screen min-w-screen "
+            className="min-h-screen min-w-screen not-md:object-cover"
             src="/greencart.avif"
             alt=""
           />
         </div>
         <div>
-          <h1 className="absolute text-7xl font-bold text-white right-52 top-40">
+          <h1 className="absolute text-7xl font-bold text-white right-52 top-40 not-md:flex not-md:top-28 not-md:right-0 not-md:text-4xl">
             YOU WANT IT{" "}
           </h1>
-          <h1 className="absolute text-9xl font-bold text-white right-56 top-60">
+          <h1 className="absolute text-9xl font-bold text-white right-56 top-60 not-md:flex not-md:right-0 not-md:text-6xl not-md:text-center">
             YOU GOT IT
           </h1>
           <button
             onClick={() => navigate("/products")}
-            className="absolute bottom-40 right-30 not-md:bottom-20 p-4 w-50 text-2xl text-green-900 bg-white border-2 hover:scale-[95%] hover:text-white hover:bg-green-800 transition-transform rounded-xl"
+            className="absolute bottom-40 right-30 not-md:bottom-20 p-4 w-50 text-2xl text-green-900 bg-white border-2 hover:scale-[95%] hover:text-white hover:bg-green-800 transition-transform rounded-xl not-md:right-10"
           >
             View Products
           </button>

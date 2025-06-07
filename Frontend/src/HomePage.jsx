@@ -36,7 +36,7 @@ const HomePage = ({
           </h1>
           <button
             onClick={() => navigate("/products")}
-            className="absolute bottom-40 right-30 not-md:bottom-20 p-4 w-50 text-2xl text-green-900 bg-white border-2 hover:scale-[95%] hover:text-white hover:bg-green-800 transition-transform rounded-xl not-md:right-10"
+            className="absolute bottom-40 right-30 not-md:bottom-80 p-4 w-50 text-2xl text-green-900 bg-white border-2 hover:scale-[95%] hover:text-white hover:bg-green-800 transition-transform rounded-xl not-md:right-10"
           >
             View Products
           </button>

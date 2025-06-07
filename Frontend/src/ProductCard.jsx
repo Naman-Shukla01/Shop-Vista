@@ -31,7 +31,7 @@ const ProductCard = ({
         buttonClicked = false;
       }}
       div
-      className="p-4 mb-14 h-80 w-60 hover:scale-[95%] transition-transform "
+      className="m-1.5 mb-14 h-fit w-60 hover:scale-[95%] transition-transform "
     >
       <div className="relative bg-gray-200 rounded-lg">
         <p

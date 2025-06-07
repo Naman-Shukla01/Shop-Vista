@@ -29,7 +29,7 @@ const CartProductCard = ({ products, cart, setCart, updateSubtotal }) => {
     );
     
   return (
-    <div onClick={()=> navigate(`/products/${id}`)} className="flex m-4 w-[90vh] rounded-lg  bg-gray-200 not-md:w-4/5">
+    <div onClick={()=> navigate(`/products/${id}`)} className="flex m-4 w-[70vh] not-md:w-[95vw] rounded-lg  bg-gray-200 ">
       <div >
         <img className="h-28 w-28" src={thumbnail} alt={title} />
         <div className="flex">

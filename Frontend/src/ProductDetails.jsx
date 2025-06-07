@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
-import { useState } from "react";
+import { useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetails = ({
   acc, setAcc,
@@ -12,12 +13,32 @@ const ProductDetails = ({
 }) => {
   let [count, setCount] = useState(1);
   let { id: pId } = useParams();
+
+  const navigate = useNavigate();
+  let buttonClicked = false;
+
   const reduceCount = () => {
     setCount((prevCount) => prevCount - 1);
   };
   const increaseCount = () => {
     setCount((prevCount) => prevCount + 1);
   };
+
+
+  let updateWishlist = (e) => {
+    e.preventDefault();
+    buttonClicked = true;
+    if (acc) {
+      if (!wishlist.includes(id)) {
+        setWishlist((prevWishlist) => [...prevWishlist, id]);
+      } else {
+        setWishlist((prevWishlist) => prevWishlist.filter((idx) => idx !== id));
+      }
+    } else {
+      navigate("/signup");
+    }
+  };  
+
 
   if (products.length == 0)
     return (
@@ -45,7 +66,17 @@ const ProductDetails = ({
     <div className="p-4">
       <Navbar acc={acc} setAcc={setAcc} cart={cart} />
       <div className="mt-4 flex not-md:flex-wrap">
-        <div className="mr-3">
+        <div className="mr-3 relative">
+          <p
+          onClick={updateWishlist}
+          className="absolute top-0 right-1.5 text-xl"
+        >
+          {!wishlist.includes(id) ? (
+            <i className="fa-regular fa-heart"></i>
+          ) : (
+            <i className="fa-solid fa-heart"></i>
+          )}
+        </p>
           <img
             className="h-96 w-96  object-cover bg-gray-200 rounded-lg"
             src={thumbnail}

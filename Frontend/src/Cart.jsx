@@ -3,11 +3,12 @@ import CartProductCard from "./CartProductCard";
 import { useState } from "react";
 
 import OrderSummary from "./OrderSummary";
+import { useNavigate } from "react-router-dom";
 
 const Cart = ({acc, setAcc, products, cart, setCart, cartTotal, setCartTotal, subtotals, setSubtotals }) => {
   
 
-
+  let navigate = useNavigate();
   const updateSubtotal = (id, subtotal) => {
     setSubtotals((prev) => {
       const updated = { ...prev, [id]: subtotal };
